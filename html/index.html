@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime World</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+        // Simulate a logged-in user check
+        if (!localStorage.getItem('loggedIn')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+    <header>
+        <h1>Welcome to Anime World</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="anime-list.html">Anime List</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li class="logout"><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="slideshow">
+            <div class="slides">
+                <img src="2b.jpg" alt="Anime 1">
+                <img src="damn3.jpg" alt="Anime 2">
+                <img src="gojo.jpg" alt="Anime 3">
+                <img src="lifes real  n and m.jpg" alt="Anime 4">
+                <img src="stone.jpg" alt="Anime 5">
+                <img src="witch.png" alt="Anime 6">
+            </div>
+            <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
+        </section>
+
+        <section>
+            <h2>Anime Genres</h2>
+            <div class="genres">
+                <button onclick="navigateToGenre('action')">Action</button>
+                <button onclick="navigateToGenre('adventure')">Adventure</button>
+                <button onclick="navigateToGenre('comedy')">Comedy</button>
+                <button onclick="navigateToGenre('drama')">Drama</button>
+                <button onclick="navigateToGenre('fantasy')">Fantasy</button>
+                <button onclick="navigateToGenre('horror')">Horror</button>
+                <button onclick="navigateToGenre('romance')">Romance</button>
+                <button onclick="navigateToGenre('scifi')">Sci-Fi</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Anime World. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
